@@ -1,0 +1,5 @@
+#include <os2.h>
+#include "esampdlg.h"
+
+rcinclude esampdlg.dlg
+

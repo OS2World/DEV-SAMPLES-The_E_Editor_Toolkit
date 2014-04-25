@@ -1,0 +1,20 @@
+NAME          EDIALOG
+
+DESCRIPTION   'E-MLE sample application'
+
+CODE          MOVEABLE
+DATA          MOVEABLE MULTIPLE
+HEAPSIZE      8192
+STACKSIZE     20480
+
+IMPORTS
+    ETKE551.ETKWNDPROC
+    ETKE551._EtkRegister
+    ETKE551._EtkCreate
+    ETKE551._EtkDestroy
+    ETKE551._EtkInsertTextBuffer
+    ETKE551._EtkQueryTextBuffer
+    ETKE551._EtkDeleteText
+    ETKE551._EtkSetFileField
+    ETKE551._EtkQueryFileField
+

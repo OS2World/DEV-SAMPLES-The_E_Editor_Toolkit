@@ -1,0 +1,62 @@
+#include <os2.h>
+#include "edialog.h"
+
+MENU EDIALOG_RC PRELOAD
+BEGIN
+  SUBMENU "~File",  0
+    BEGIN
+       MENUITEM "~E-MLE dialog box sample", IDD_CMD
+    END
+END
+
+DLGTEMPLATE DLG_SAMP LOADONCALL MOVEABLE DISCARDABLE 
+BEGIN
+    DIALOG "Customer comments", DLG_SAMP, 20, 5, 243, 201, FS_NOBYTEALIGN | 
+                FS_DLGBORDER | WS_VISIBLE | WS_CLIPSIBLINGS | WS_SAVEBITS, 
+                FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        CONTROL "Your Name", 256, 3, 188, 54, 8, WC_STATIC, SS_TEXT | DT_LEFT | 
+                DT_TOP | WS_GROUP | WS_VISIBLE
+        CONTROL "", 257, 60, 189, 175, 8, WC_ENTRYFIELD, ES_LEFT | ES_MARGIN | 
+                WS_TABSTOP | WS_VISIBLE
+        CONTROL "Room", 258, 4, 170, 26, 8, WC_STATIC, SS_TEXT | DT_LEFT | 
+                DT_TOP | WS_GROUP | WS_VISIBLE
+        CONTROL "", 259, 36, 172, 27, 8, WC_ENTRYFIELD, ES_LEFT | ES_MARGIN | 
+                WS_TABSTOP | WS_VISIBLE
+        CONTROL "Ext.", 260, 77, 170, 20, 8, WC_STATIC, SS_TEXT | DT_LEFT | 
+                DT_TOP | WS_GROUP | WS_VISIBLE
+        CONTROL "", 261, 105, 172, 39, 8, WC_ENTRYFIELD, ES_LEFT | ES_MARGIN | 
+                WS_TABSTOP | WS_VISIBLE
+        CONTROL "Date", 262, 154, 170, 20, 8, WC_STATIC, SS_TEXT | DT_LEFT | 
+                DT_TOP | WS_GROUP | WS_VISIBLE
+        CONTROL "", 263, 185, 172, 46, 8, WC_ENTRYFIELD, ES_LEFT | ES_MARGIN | 
+                WS_TABSTOP | WS_VISIBLE
+        CONTROL "Yes", 264, 139, 150, 34, 7, WC_BUTTON, BS_CHECKBOX | WS_TABSTOP | 
+                WS_VISIBLE
+        CONTROL "No", 265, 190, 150, 35, 7, WC_BUTTON, BS_CHECKBOX | WS_TABSTOP | 
+                WS_VISIBLE
+        CONTROL "1. Order filled Promptly?", 266, 5, 150, 108, 8, WC_STATIC, 
+                SS_TEXT | DT_LEFT | DT_TOP | WS_GROUP | WS_VISIBLE
+        CONTROL "2. Is it what you requested?", 267, 5, 135, 118, 8, WC_STATIC, 
+                SS_TEXT | DT_LEFT | DT_TOP | WS_GROUP | WS_VISIBLE
+        CONTROL "Yes", 268, 139, 135, 30, 7, WC_BUTTON, BS_CHECKBOX | WS_TABSTOP | 
+                WS_VISIBLE
+        CONTROL "No", 269, 190, 135, 33, 7, WC_BUTTON, BS_CHECKBOX | WS_TABSTOP | 
+                WS_VISIBLE
+        CONTROL "3. Please indicate your impression of the delivering attendant?", 
+                270, 5, 112, 234, 17, WC_STATIC, SS_TEXT | DT_LEFT | DT_TOP | 
+                DT_WORDBREAK | WS_GROUP | WS_VISIBLE
+        CONTROL "4. Briefly comment on our service and suggestions for improvement.", 
+                272, 5, 51, 228, 17, WC_STATIC, SS_TEXT | DT_LEFT | DT_TOP | 
+                DT_WORDBREAK | WS_GROUP | WS_VISIBLE
+        CONTROL "", IDD_RECT1, 7, 70, 228, 39, WC_STATIC, SS_BKGNDRECT | 
+                WS_GROUP | WS_VISIBLE
+        CONTROL "", IDD_RECT2, 4, 17, 235, 34, WC_STATIC, SS_BKGNDRECT | 
+        CONTROL "OK", DID_OK, 7, 2, 58, 12, WC_BUTTON, BS_PUSHBUTTON | 
+                WS_TABSTOP | WS_VISIBLE
+                WS_GROUP | WS_VISIBLE
+        CONTROL "Cancel", DID_CANCEL, 77, 2, 58, 12, WC_BUTTON, BS_PUSHBUTTON | 
+                WS_TABSTOP | WS_VISIBLE
+    END
+END
+
